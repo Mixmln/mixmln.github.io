@@ -1,0 +1,95 @@
+.contact-container {
+  background: linear-gradient(0deg, rgb(248, 248, 248) 0%, rgb(238, 238, 238) 15%, rgb(238, 238, 238) 85%, rgb(248, 248, 248) 100%);
+  height: -moz-max-content;
+  height: max-content;
+  padding: 6rem 0;
+}
+.contact-container .contact {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.contact-container .contact .icon {
+  filter: drop-shadow(-1px 1px rgba(109, 109, 109, 0.651));
+}
+.contact-container .contact h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 12px;
+}
+.contact-container .contact h5 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.contact-container .contact__content {
+  display: flex;
+  gap: 70px;
+  margin-top: 3rem;
+}
+.contact-container .contact__content .contact-info-card {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+.contact-container .contact__content .contact-info-card .contact-icon-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+}
+.contact-container .contact__content .contact-info-card .contact-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact-container .contact__content .contact-info-card .contact-card-content .title {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+.contact-container .contact__content .contact-info-card .contact-card-content .content {
+  color: #767676;
+  font-size: 16px;
+  font-weight: 500;
+}
+.contact-container .contact .contact-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 1024px) {
+  .contact-container {
+    padding: 2rem 0 4rem 0;
+  }
+  .contact-container .contact {
+    margin: 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-container .contact .contact__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .contact-container .contact .contact__content .contact-info-card {
+    flex-direction: column;
+  }
+  .contact-container .contact .contact__content .contact-info-card .contact-card-content {
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .contact-container .contact .contact-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}/*# sourceMappingURL=contact.css.map */

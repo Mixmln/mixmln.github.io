@@ -1,0 +1,166 @@
+.projects-container {
+  padding: 8rem 0;
+}
+.projects-container .portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 965px;
+  margin: 0 auto;
+}
+.projects-container .portfolio .portfolio-title {
+  align-self: flex-start;
+  font-size: 18px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 12px;
+}
+.projects-container .portfolio .portfolio-subtitle {
+  align-self: flex-start;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.projects-container .portfolio .portfolio__projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 2rem 0;
+}
+.projects-container .project__card {
+  background-color: #fff;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 60px;
+}
+.projects-container .project__card .project__image {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 360px;
+  overflow: hidden;
+  max-width: 500px;
+}
+.projects-container .project__card .project__image img {
+  width: 100%;
+  height: auto;
+  transform: translateY(0%);
+  transition: 8s all cubic-bezier(0.41, 0.35, 0.59, 0.59);
+}
+.projects-container .project__card .project__image img:hover {
+  transform: translateY(-79%);
+  cursor: pointer;
+}
+.projects-container .project__card .project__description {
+  max-width: 350px;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects-container .project__card .project__description h5 {
+  font-size: 20px;
+}
+.projects-container .project__card .project__description .projext-text {
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #767676;
+  font-weight: 500;
+}
+.projects-container .project__card .project__description .project__technologies {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.projects-container .project__card .project__description .project__technologies .technology__card {
+  padding: 0.5rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 6px 0px #d6d6d6;
+  border-radius: 2px;
+}
+.projects-container .project__card .project__description .project__technologies .technology__card p {
+  font-size: 17px;
+  font-weight: 700;
+}
+.projects-container .project__card .project__description .project__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.projects-container .project__card .project__description .project__links .clickable-link {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.projects-container .project__card .project__description .project__links .clickable-link:hover {
+  color: orange;
+}
+.projects-container .project__card .project__description .project__links .clickable-link p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .projects-container {
+    margin: 0 64px;
+    padding: 4rem 0 2rem 0;
+  }
+  .projects-container .portfolio {
+    margin: 0 32px;
+  }
+  .projects-container .portfolio .portfolio-title,
+  .projects-container .portfolio .portfolio-subtitle {
+    align-self: center;
+  }
+  .projects-container .portfolio__projects {
+    max-width: 100vw;
+  }
+  .projects-container .portfolio__projects .project__card {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .projects-container .portfolio__projects .project__card .project__image {
+    width: 100%;
+  }
+  .projects-container .project__card {
+    gap: 1.5rem;
+  }
+  .projects-container .project__card .project__image {
+    max-width: 700px;
+    height: 450px;
+  }
+  .projects-container .project__card .project__description {
+    max-width: none;
+    margin: 0 5rem;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .projects-container {
+    margin: 0 1rem;
+  }
+  .projects-container .portfolio {
+    margin: 0 1rem;
+  }
+  .projects-container .portfolio .portfolio-subtitle {
+    text-align: center;
+  }
+  .projects-container .project__card .project__image {
+    height: 300px;
+  }
+  .projects-container .project__card .project__description {
+    margin: 0 1rem;
+  }
+}/*# sourceMappingURL=projects.css.map */

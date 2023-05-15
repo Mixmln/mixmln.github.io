@@ -1,0 +1,196 @@
+.hero-container {
+	background: linear-gradient(
+		0deg,
+		rgba(248, 248, 248, 1) 0%,
+		rgba(238, 238, 238, 1) 15%,
+		rgba(238, 238, 238, 1) 85%,
+		rgba(248, 248, 248, 1) 100%
+	);
+}
+
+.hero {
+	box-sizing: border-box;
+	padding: 10rem 0;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 3rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	.top__side {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 50px;
+	}
+	.hero__content {
+		max-width: 29rem;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		h2 {
+			font-size: 3.5rem;
+			line-height: 1.2;
+			position: relative;
+		}
+		p {
+			color: #767676;
+			font-size: 1.3rem;
+			font-weight: 500;
+			line-height: 1.5;
+		}
+	}
+	.hand {
+		position: absolute;
+		bottom: 0.3rem;
+		right: 7.7rem;
+		width: 50px;
+		height: 50px;
+		animation: 2.5s hand-shake infinite;
+	}
+	.links {
+		display: flex;
+		gap: 5px;
+		* {
+			cursor: pointer;
+			transition: 0.3s ease-out;
+			&:hover {
+				color: orange;
+			}
+		}
+	}
+	.animation-container {
+		height: 400px;
+		width: 350px;
+		.hero__animation {
+			width: 100%;
+			height: 100%;
+			border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+			background-image: url('../assets/img1copy56/3d-illustration-classic-black-white-illusion-abstract-gradient-background-with-lines-modern-graphic-texture-geometric-pattern.jpeg');
+			background-position: center;
+			background-size: cover;
+			animation: image-animation 16s cubic-bezier(0.43, 0.38, 0.43, 0.4)
+				infinite;
+		}
+	}
+	.hero__stack {
+		margin-left: -70px;
+		width: 100%;
+		height: 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		.division {
+			border: 1px solid black;
+			border-radius: 10px;
+			height: 20px;
+		}
+		.technologies {
+			margin-left: 20px;
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			.icon-container {
+				width: 70px;
+				height: 70px;
+				border-radius: 50%;
+				background-color: #ffffff91;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				box-shadow: 0px 0px 7px 0px #c1c1c1;
+				> img {
+					width: 30px;
+					height: 30px;
+					mix-blend-mode: darken;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.hero {
+		flex-direction: column;
+		padding: 10rem 0 4rem 0;
+		.top__side {
+			flex-direction: column-reverse;
+		}
+		.hero__stack {
+			flex-direction: column;
+			align-items: center;
+			height: max-content;
+			margin-left: 0;
+			.division {
+				width: 50px;
+				height: 0px;
+			}
+			.technologies {
+				flex-wrap: wrap;
+				align-items: center;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.hero {
+		.top__side {
+			margin: 0 1rem;
+			.hero__content {
+				align-items: center;
+				h2 {
+					font-size: 2.5rem;
+					text-align: center;
+					.hand {
+						bottom: 0;
+						right: 3vw;
+					}
+				}
+				p {
+					text-align: center;
+				}
+			}
+		}
+		.hero__stack {
+			.technologies {
+				margin: 0 1rem;
+				justify-content: center;
+			}
+		}
+		.animation-container {
+			height: 250px;
+			width: 250px;
+		}
+	}
+}
+
+@keyframes hand-shake {
+	0% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(30deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes image-animation {
+	0% {
+		border-radius: 80% 20% 30% 70%/70% 30% 80% 40%;
+		transform: rotate(0deg);
+	}
+	50% {
+		border-radius: 20% 80% 70% 10%/10% 80% 20% 80%;
+		transform: scale(0.9);
+	}
+	100% {
+		border-radius: 80% 20% 30% 70%/70% 30% 80% 40%;
+		transform: rotate(360deg) scale(1);
+	}
+}
