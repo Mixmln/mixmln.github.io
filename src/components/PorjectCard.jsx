@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+
 import { AiOutlineGithub } from 'react-icons/ai';
 import { BsBoxArrowInRight } from 'react-icons/bs';
 
@@ -10,7 +11,8 @@ function PorjectCard({ project }) {
 		githubLink,
 		demoUrl,
 		img,
-		reverse,
+
+		secondClassName,
 	} = project;
 
 	const visitDemo = (url) => {
@@ -26,6 +28,7 @@ function PorjectCard({ project }) {
 		>
 			<div className='project__image'>
 				<img
+					className={`${secondClassName}`}
 					src={img}
 					alt='project-hero'
 				/>
@@ -44,10 +47,18 @@ function PorjectCard({ project }) {
 					))}
 				</div>
 				<div className='project__links'>
-					<div className='clickable-link'>
-						<p>Code</p>
-						<AiOutlineGithub size={30} />
-					</div>
+					{githubLink ? (
+						<div
+							className='clickable-link'
+							onClick={() => visitDemo(githubLink)}
+						>
+							<p>Code</p>
+							<AiOutlineGithub size={30} />
+						</div>
+					) : (
+						''
+					)}
+
 					<div
 						className='clickable-link'
 						onClick={() => visitDemo(demoUrl)}

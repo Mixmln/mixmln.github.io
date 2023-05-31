@@ -5,17 +5,20 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { Provider } from './context/MainContext';
 
 function App() {
 	return (
-		<div className='main'>
-			<Header />
-			<Hero />
-			<About />
-			<Projects />
-			<Contact />
-			<Footer />
-		</div>
+		<Provider>
+			<div className='main'>
+				<Header />
+				<Hero />
+				<About />
+				<Projects />
+				<Contact />
+				<Footer />
+			</div>
+		</Provider>
 	);
 }
 

@@ -22,9 +22,8 @@
   position: relative;
 }
 .about-container .about .code-snippet__img {
-  margin-top: 10px;
   width: 400px;
-  height: 580px;
+  height: 525px;
   border-radius: 15px;
   opacity: 0.9;
   -o-object-fit: cover;
